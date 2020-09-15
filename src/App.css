@@ -1,52 +1,84 @@
 :root{
+  --BGcolor: #ffffff;
   --DarkBlue: hsl(240, 38%, 20%);
   --GrayishBlue: hsl(240, 18%, 77%);
   font-size: 32px;
   font-family: 'Inter', sans-serif;
 }
 
-.App {
+*{
+  box-sizing:border-box;
+}
+
+.body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+
+  background: url(./img/pattern-curve.svg) no-repeat;
+  background-size: 80%;
+  background-position: left bottom;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  height: 55%;
+  width: 100%;
+  background: var(--BGcolor)  url(./img/pattern-bg.svg) no-repeat;
+  background-size: 89%;
+  background-position:center center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img{
+  width: 254px;
+  border-radius: 5px;
+}
+
+.main{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items:center;
+
+  background: var(--BGcolor)  url(./img/pattern-quotes.svg) no-repeat;
+  background-size: 16%;
+  background-position: center top;
 }
 
-.App-link {
-  color: #61dafb;
+.main p {
+  font-size: 0.55rem;
+  font-weight: 300;
+  line-height: 1.38;
+
+  padding: 0.8rem 1rem 0.55rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.main h6 {
+  font-size: 0.45rem;
+  font-weight: 500;
+  line-height:0.6rem;
+  color: var(--GrayishBlue)
+}
+
+.main strong{
+  font-weight:700;
+  color:#000000;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  position:absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 0.5rem;
 }
 
 .attribution a {
