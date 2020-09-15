@@ -5,21 +5,25 @@ function App() {
   return (
     <div className="App">
       <body>
-
-        “ I’ve been interested in coding for a while but never taken the jump, until now. 
-        I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-        excited about the future. ”
-
-        Tanya Sinclair
-        UX Engineer
-
-        “ If you want to lay the best foundation possible I’d recommend taking this course. 
-        The depth the instructors go into is incredible. I now feel so confident about 
-        starting up as a professional developer. ”
-
-        John Tarkpor
-        Junior Front-end Developer
-        
+        <div>
+          <p>
+          “ I’ve been interested in coding for a while but never taken the jump, until now. 
+          I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+          excited about the future. ”
+          </p>
+          <div>
+            <h6><strong>Tanya Sinclair</strong></h6>
+            <h6>UX Engineer</h6>
+          </div>
+        </div>
+        <div>
+          <p>“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”
+          </p>
+          <div>
+            <h6><strong>John Tarkpor</strong></h6>
+            <h6>Junior Front-end Developer</h6>
+          </div>
+        </div>
         <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
           Coded by <a href="#">Your Name Here</a>.
