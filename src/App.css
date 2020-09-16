@@ -16,6 +16,7 @@
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
+  max-width: 375px;
 
   background: url(./img/pattern-curve.svg) no-repeat;
   background-size: 80%;
@@ -26,7 +27,7 @@
   display: flex;
   align-items:center;
   justify-content:center;
-  flex-basis: 55%;
+  flex: 0 1 55%;
 
   background: var(--BGcolor)  url(./img/pattern-bg.svg) no-repeat;
   background-size: 89%;
@@ -92,11 +93,13 @@
     flex-flow:row-reverse nowrap;
     align-items:center;
     background-size: 42%;
+    max-width: 1440px;
   }
 
   .hero {
     height: inherit;
-    flex-basis: 320%;
+    flex: 0 1 320%;
+    width: 853px;
     background-size: 82%;
   }
 
@@ -105,14 +108,14 @@
   }
 
   .main{
-    height: 50%;
+    height: 40%;
     flex-flow:row wrap;
     align-items:flex-end;
     justify-content: flex-start;
     text-align: left;
-    background-size: 17.5%;
+    background-size: 20.5%;
   }
-  /* needs refact */
+
   .main p {
     font-size: 1rem;
 
@@ -120,12 +123,16 @@
     padding: 0;
     margin: 0 -7rem 0 5.5rem;
   }
+
   .main h6 {
+    display:block;    
+    margin-bottom:0.5rem;
+
     font-size: 0.6rem;
   }
 
   .main strong{
-    margin: 0 0.3rem 0 5.5rem;
+    margin: 0 0.3rem 1rem 5.5rem;
     font-weight:700;
   }
 
