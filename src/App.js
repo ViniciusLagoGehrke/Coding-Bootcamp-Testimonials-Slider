@@ -1,6 +1,7 @@
 import React from 'react';
 import './reset.css';
 import './App.css';
+import Slider from './components/Slider';
 import tanya from './img/image-tanya.jpg';
 import john from './img/image-john.jpg';
 
@@ -11,6 +12,7 @@ function App() {
         <div className="card">
           <div className="hero">
             <img className="img" src={tanya} alt="tanya perfil" />
+            <Slider />
           </div>
           <div className="main">
             <p>“ I’ve been interested in coding for a while but never taken the jump, until now. 
@@ -23,6 +25,7 @@ function App() {
         <div className="card">
           <div className="hero">
             <img className="img" src={john} alt="john perfil" />
+            <Slider />
           </div>
           <div className="main">
             <p>“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”</p>

@@ -2,6 +2,8 @@
   --BGcolor: #ffffff;
   --DarkBlue: hsl(240, 38%, 20%);
   --GrayishBlue: hsl(240, 18%, 77%);
+  --ImgSize: 254px;
+
   font-size: 32px;
   font-family: 'Inter', sans-serif;
 }
@@ -24,6 +26,7 @@
 }
 
 .hero {
+  position:relative;
   display: flex;
   align-items:center;
   justify-content:center;
@@ -35,8 +38,17 @@
 }
 
 .img{
-  width: 254px;
+  width: var(--ImgSize);
   border-radius: 5px;
+
+  -webkit-box-shadow: 0px 25px 25px -20px rgba(0,0,50,0.25);
+  -moz-box-shadow: 0px 25px 25px -20px rgba(0,0,50,0.25);
+  box-shadow: 0px 25px 25px -10px rgba(0,0,50,0.25);
+}
+
+.slider{
+  position:absolute;
+  top:calc(50% + var(--ImgSize)/2 - var(--btnHeight)/2);
 }
 
 .main{
@@ -89,6 +101,11 @@
 /* Laptop and Up */
 
 @media (min-width: 769px) {
+
+  :root{
+    --ImgSize: 540px;
+  }
+
   .card{
     flex-flow:row-reverse nowrap;
     align-items:center;
@@ -104,7 +121,12 @@
   }
 
   .img{
-    width: 540px;
+    width: var(--ImgSize);
+  }
+
+  .slider{
+    top:calc(50% + var(--ImgSize)/2 - var(--btnHeight)/2);
+    left:calc(50% - var(--ImgSize)/2.5);
   }
 
   .main{
@@ -118,6 +140,7 @@
 
   .main p {
     font-size: 1rem;
+    z-index: 1;
 
     width: 125%;
     padding: 0;
