@@ -1,38 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './reset.css';
 import './App.css';
+import Card from './components/Card';
 import Slider from './components/Slider';
 import tanya from './img/image-tanya.jpg';
 import john from './img/image-john.jpg';
 
 function App() {
+  const [index, setIndex] = useState(0);
+
+  const slides = [
+    {
+      name: 'tanya',
+      perfil: tanya,
+      about: '" I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. "',
+      fullName: 'Tanya Sinclair',
+      profession: 'UX Engineer'
+    },
+    {
+      name: 'john',
+      perfil: john,
+      about: '“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”',
+      fullName: 'John Tarkpor',
+      profession: 'Junior Front-end Developer'
+    }
+  ];
+  
   return (
     <>
       <div className="body">
-        <div className="card">
-          <div className="hero">
-            <img className="img" src={tanya} alt="tanya perfil" />
-            <Slider />
-          </div>
-          <div className="main">
-            <p>“ I’ve been interested in coding for a while but never taken the jump, until now. 
-            I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-            excited about the future. ”</p>
-            <h6><strong>Tanya Sinclair</strong></h6>
-            <h6>UX Engineer</h6>
-          </div>
-        </div>
-        <div className="card">
-          <div className="hero">
-            <img className="img" src={john} alt="john perfil" />
-            <Slider />
-          </div>
-          <div className="main">
-            <p>“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”</p>
-            <h6><strong>John Tarkpor</strong></h6>
-            <h6>Junior Front-end Developer</h6>
-          </div>
-        </div>      
+        <Card slide={slides[index]} />
+        <Slider slides={slides} index={index} setIndex={setIndex} />
       </div>
       <div className="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
