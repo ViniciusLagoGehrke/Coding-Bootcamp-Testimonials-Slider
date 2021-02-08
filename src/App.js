@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
-import './reset.css';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+
+import breakpoints from './breakpoints';
+
 import Card from './components/Card';
-import Slider from './components/Slider';
+import Attribution from './components/Attribution';
+
 import tanya from './img/image-tanya.jpg';
 import john from './img/image-john.jpg';
+import curve from './img/pattern-curve.svg';
 
-function App() {
-  const [index, setIndex] = useState(0);
+const StyledBody = styled.main`
+  display: flex;
+  flex-flow:column nowrap;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
 
+  background: url(${curve}) no-repeat;
+  background-size: 80%;
+  background-position: left bottom;
+  
+  @media ${breakpoints.device.tablet} {
+    background-size: 50%;
+  }
+`
+
+export default function App() {
   const slides = [
     {
       name: 'tanya',
@@ -25,19 +43,13 @@ function App() {
       profession: 'Junior Front-end Developer'
     }
   ];
-  
+
   return (
     <>
-      <div className="body">
-        <Card slide={slides[index]} />
-        <Slider slides={slides} index={index} setIndex={setIndex} />
-      </div>
-      <div className="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-          Coded by <a href="https://github.com/ViniciusLagoGehrke">Vinicius Gehrke</a>.
-      </div>
+      <StyledBody>
+        <Card slideList={slides} />
+        <Attribution />
+      </StyledBody>
     </>
   );
 }
-
-export default App;
