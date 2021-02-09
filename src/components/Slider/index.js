@@ -14,7 +14,15 @@ const SytledSlider = styled.div`
   @media ${breakpoints.device.tablet} {
     --btnHeight:1.75rem; 
     --btnWidth:3.5rem;
+    --arrowSize:0.3rem;
+  }
+
+  @media ${breakpoints.device.desktop} {
+    --btnHeight:1.8rem; 
+    --btnWidth:3.6rem;
     --arrowSize:0.4rem;
+
+    transform: translateX(-130%) translateY(-50%);
   }
 
   *{
@@ -40,7 +48,6 @@ const SytledSlider = styled.div`
 `
 
 SytledSlider.Button = styled.button`
-  --arrowSize:0.3rem;
   height:100%;
   width:50%;
 

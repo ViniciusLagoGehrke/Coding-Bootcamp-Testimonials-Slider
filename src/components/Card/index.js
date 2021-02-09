@@ -12,10 +12,18 @@ const StyledCard = styled.article`
   display: flex;
   flex-flow:column nowrap;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 88%;
   margin: 0 auto;
   max-width: ${breakpoints.size.tablet};
+
+  @media ${breakpoints.device.desktop} {
+    position: relative;
+    flex-flow:row-reverse;
+    height: 100%;
+    max-width: 1300px;
+  }
 `
 
 StyledCard.Image = styled.div`
@@ -47,10 +55,15 @@ StyledCard.Image = styled.div`
   }
   
   @media ${breakpoints.device.desktop} {
-    padding-top: 1rem; 
+    padding-top: 0;
+    background-position: 0% 35%;
+    width: 100%;
+    height: 100%;
+    flex: 1 0 57%;
     
     & img{
-      width: 540px;
+      width: 80%;
+      max-width: 540px;
     }
   }
 `
@@ -71,27 +84,64 @@ StyledCard.Description = styled.div`
     line-height: 1.38;
 
     padding: 0.8rem 1.2rem 0.55rem;
-
-    @media ${breakpoints.device.tablet} {
-      font-size: 1rem;
-    }
   }
+
+  & div div{
+    display: flex;
+    flex-flow: column nowrap;
+  }  
 
   & h6{
     font-size: 0.45rem;
     font-weight: 500;
     line-height:0.6rem;
     color: var(--GrayishBlue);
-    
-    @media ${breakpoints.device.tablet} {
-      font-size: 0.75rem;
-      line-height:1.1rem;
-    }
   }
 
   & strong{
     font-weight:700;
     color:#000000;
+  }
+
+  @media ${breakpoints.device.tablet} {
+    & p{
+      font-size: 0.75rem;
+    }
+
+    & h6{
+      font-size: 0.65rem;
+      line-height:1.1rem;
+    }
+  }
+
+  @media ${breakpoints.device.desktop} {
+    height:50%;
+    flex: 1 1 55%;
+    text-align: left;
+
+    background-position: 36% 12%;
+    background-size: 20%;
+
+    & > div{
+      position:absolute;
+      left: 10%;
+      width: 45%;
+      max-width: 700px;
+    }
+
+    & p{
+      font-size: 1rem;
+      padding: 0 0 1rem;
+    }
+
+    & div div{
+      flex-flow: row nowrap;
+    }
+    
+    & h6{
+      margin-right: 0.5rem;
+    }
+
   }
 `
 
@@ -117,9 +167,13 @@ function Card({ slideList }) {
         <Slider slideList={slideList} index={index} setIndex={setIndex} />
       </StyledCard.Image>
       <StyledCard.Description>
-        <p>{about}</p>
-        <h6><strong>{fullName}</strong></h6>
-        <h6>{profession}</h6>
+        <div>
+          <p>{about}</p>
+          <div>
+            <h6><strong>{fullName}</strong></h6>
+            <h6>{profession}</h6>
+          </div>
+        </div>
       </StyledCard.Description>
     </StyledCard>
   )

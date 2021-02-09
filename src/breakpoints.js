@@ -1,7 +1,7 @@
 const size = {
  mobile: '320px',
  tablet: '500px',
- desktop: '1200px',
+ desktop: '1000px',
 }
 const device = {
  mobile: `(min-width: ${size.mobile})`,
