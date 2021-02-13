@@ -7,6 +7,32 @@ import Slider from '../Slider';
 import bg from '../../img/pattern-bg.svg';
 import quotes from '../../img/pattern-quotes.svg';
 
+/*
+const image = document.getElementsByClassName("img");
+const bodyRect = document.body.getBoundingClientRect();
+var w = window.innerWidth;
+var h = window.innerHeight;
+console.log(`innerWidth: ${w}`)
+console.log(`innerHeight: ${h}`)
+console.log(bodyRect)
+console.log(bodyRect.width/2)
+
+left arrow  37
+up arrow    38
+right arrow 39
+down arrow  40
+
+$(document).keyup(function(e) {
+   if (e.keycode === 27) {
+     closemenu();
+    }
+    if(e.keycode === 37) {
+      // code for showing next slide
+        plusSlides(n)
+      }
+     // same for other keys
+   }
+*/
 
 const StyledCard = styled.article`
   display: flex;
@@ -41,6 +67,8 @@ StyledCard.Image = styled.div`
   & img{
     width: 254px;
     border-radius: 5px;
+    transform: rotate(45deg);
+    transform-origin: 100vh 50vw;
 
     -webkit-box-shadow: 0px 25px 25px -20px rgba(0,0,50,0.25);
     -moz-box-shadow: 0px 25px 25px -20px rgba(0,0,50,0.25);
