@@ -19,3 +19,7 @@ The users should be able to:
 
  - Slider functionality from mouse/trackpad or keyboard;
  - Create React components
+
+Please check the [live website](https://FEM_coding-bootcamp-testimonials-slider.vercel.app/)
+
+[OnPortfolio](https://front-end-portfolio.vercel.app/)
