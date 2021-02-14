@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 import breakpoints from '../../breakpoints';
 
@@ -89,6 +90,15 @@ const RightButton = styled(SytledSlider.Button)`
 `
 
 function Slider({ index, setIndex, slideList }) {
+  
+
+  const handleArrowKeys = (key) => {
+    if(key === 'left'){
+      slideLeft()
+    } else if (key === 'right') {
+      slideRight()
+    }
+  }
 
   const slideLeft = () => {
     const nextIndex = index - 1;
@@ -104,13 +114,21 @@ function Slider({ index, setIndex, slideList }) {
   }
   
   return(
-    <SytledSlider>
+    <SytledSlider onKeyPress={handleArrowKeys} >
+
+      <KeyboardEventHandler
+        handleKeys={['left', 'right']}
+        onKeyEvent={(key, e) => handleArrowKeys(key)}
+      />
+
       <LeftButton
+        leftArrow={slideLeft}
         onClick={slideLeft}
         type="button"
       >
       </LeftButton>
       <RightButton
+        rightArrow={slideRight}
         onClick={slideRight}
         type="button"
       >

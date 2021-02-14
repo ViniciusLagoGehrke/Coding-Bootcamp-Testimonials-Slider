@@ -19,4 +19,3 @@ The users should be able to:
 
  - Slider functionality from mouse/trackpad or keyboard;
  - Create React components
- - Animate more than one component
