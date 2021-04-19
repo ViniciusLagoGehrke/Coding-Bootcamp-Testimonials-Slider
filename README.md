@@ -1,6 +1,6 @@
 # Frontend Mentor - Coding Bootcamp Testimonials Slider
 
-![Desktop Design](./desktop-design-slide-1.jpg)
+![Desktop Preview](desktop-preview.jpg)
 
 Please check this link with my solution fully working: Live App
 
