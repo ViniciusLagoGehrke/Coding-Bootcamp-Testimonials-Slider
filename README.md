@@ -22,4 +22,3 @@ The users should be able to:
 
 Please check the [live website](https://vbgl-fem-coding-bootcamp-testimonials-slider.vercel.app/)
 
-[OnPortfolio](https://front-end-portfolio.vercel.app/)
